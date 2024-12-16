@@ -1,39 +1,41 @@
-class Complex {
-    private double real;
-    private double imag;
+public class Main {
+    static class Complex {
+        private double real;
+        private double imag;
 
-    // Default Constructor
-    public Complex() {
-        this.real = 0.0;
-        this.imag = 0.0;
-    }
+        // Default Constructor
+        public Complex() {
+            this.real = 0.0;
+            this.imag = 0.0;
+        }
 
-    // Parameterized Constructor
-    public Complex(double real, double imag) {
-        this.real = real;
-        this.imag = imag;
-    }
+        // Parameterized Constructor
+        public Complex(double real, double imag) {
+            this.real = real;
+            this.imag = imag;
+        }
 
-    // Addition of two complex numbers
-    public Complex add(Complex c) {
-        return new Complex(this.real + c.real, this.imag + c.imag);
-    }
+        // Addition of two complex numbers
+        public Complex add(Complex c) {
+            return new Complex(this.real + c.real, this.imag + c.imag);
+        }
 
-    // Subtraction of two complex numbers
-    public Complex subtract(Complex c) {
-        return new Complex(this.real - c.real, this.imag - c.imag);
-    }
+        // Subtraction of two complex numbers
+        public Complex subtract(Complex c) {
+            return new Complex(this.real - c.real, this.imag - c.imag);
+        }
 
-    // Multiplication of two complex numbers
-    public Complex multiply(Complex c) {
-        double realPart = this.real * c.real - this.imag * c.imag;
-        double imagPart = this.real * c.imag + this.imag * c.real;
-        return new Complex(realPart, imagPart);
-    }
+        // Multiplication of two complex numbers
+        public Complex multiply(Complex c) {
+            double realPart = this.real * c.real - this.imag * c.imag;
+            double imagPart = this.real * c.imag + this.imag * c.real;
+            return new Complex(realPart, imagPart);
+        }
 
-    // Display a complex number
-    public void display() {
-        System.out.println(this.real + " + " + this.imag + "i");
+        // Display a complex number
+        public void display() {
+            System.out.println(this.real + " + " + this.imag + "i");
+        }
     }
 
     public static void main(String[] args) {
@@ -60,3 +62,4 @@ class Complex {
         product.display();
     }
 }
+
